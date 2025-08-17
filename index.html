@@ -63,16 +63,13 @@
     </div>
 
     <script>
-        // Using in-memory storage instead of localStorage for Claude.ai compatibility
-        // To use localStorage in your own environment, replace the next two lines with:
-        // let notes = JSON.parse(localStorage.getItem('notes')) || [];
-        let notes = [];
+        // localStorage implementation
+        let notes = JSON.parse(localStorage.getItem('notes')) || [];
         let currentEditId = null;
 
-        // Save notes function (replace with localStorage version in your environment)
+        // Save notes to localStorage
         function saveNotes() {
-            // localStorage.setItem('notes', JSON.stringify(notes));
-            // For now, we'll just keep in memory
+            localStorage.setItem('notes', JSON.stringify(notes));
         }
 
         // DOM elements
